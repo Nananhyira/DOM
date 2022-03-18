@@ -1,0 +1,39 @@
+.mom{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70vh;
+	text-transform: uppercase;
+}
+
+
+#view {
+background-color: darkblue;
+height: 30vh;
+width: 40%;
+padding: 20px;
+color: white;
+text-align: center;
+border: 10px double; grey;
+
+
+}
+
+button, input {color: darkblue;
+height: 5vh;
+background-color: white;
+}
+
+
+p {
+animation:blinking 1.5s infinite;
+font-size: 20px;
+}
+
+@keyframes blinking{
+0%{   color: green;   }
+47%{   color: #9FD603; }
+62%{   color: transparent; }
+97%{   color:transparent; }
+100%{  color: #000;   }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guess the Number Game</title>
+	<style>
+		body{
+			display: flex;
+			justify-content: center;
+			height: 70vh;
+			align-items: center;
+			width: 100%;
+
+		}
+		div{
+			background-color: darkblue;
+			color: white;
+			width: 40%;
+			height: 30vh;
+			padding: 20px;
+			text-align: center;
+			text-transform: uppercase;
+			border: 10px double; purple;
+
+		}
+		button, input {color: darkblue;
+        height: 5vh;
+       background-color: white;
+       width: 200px;
+       margin: 3px;
+      font-size: 27px;
+}
+
+
+	</style>
+</head>
+<body>
+	<div id="page">
+		<h1> Hey Can You Guess a Number</h1>
+		<p id="outputText">Okay! Guess a Number Between 1 and 100</p>
+		<input id="userinput"><button id="btn" onclick="GuessTheNumber()"> Enter</button>
+		<button id="playbtn" >Play Again</button>
+
+	</div>
+
+
+
+
+
+
+<script>
+	
+	
+	let displayText = document.getElementById("outputText")
+	let btn =document.getElementById("btn")
+	let div = document.getElementById("page")
+	let playBtn = document.getElementById("playbtn")
+	let random = Math.floor(Math.random()*100)
+	console.log(random)
+	 
+	 function GuessTheNumber(){
+	 	let input = document.getElementById("userinput").value
+	 	if (random == input) {
+	 		displayText.innerHTML= "Hurray you Guessed Right "+ "" + "it was " + random
+	 		displayText.style.color = "#9FD603"
+	 		div.style.backgroundColor ="#2B5D2B"
+	 	}
+	 	else if(input>random &&input<=100){
+	 		displayText.innerHTML ="YOUr GUESS IS TOO HIGH, GUESS AGAIN ,THIS TIME LOWER" 
+	 		displayText.style.color = "red"
+	 		div.style.backgroundColor ="#603C44"
+	 	}
+	 	else if (input >random && input > 100){
+	 		displayText.innerHTML = "your guess is too high, guess again ,this time between 1 and 100"
+	 		displayText.style.color="red"
+	 		div.style.backgroundColor ="#B9E3DA"
+	 	
+	 	}
+	 	else if (input<random && input>1){
+	 		displayText.innerHTML="you Guessed too low"
+	 		displayText.style.color="#F8741C"
+	 		div.style.backgroundColor ="#2F2F2F"
+
+	 	}
+	 	else if (input< 1){
+	 		displayText.innerHTML ="higher, it has to be between 1 and 100"
+	 		displayText.style.color="#E79D90"
+	 		div.style.backgroundColor ="#64508F"
+
+	 	}
+	 	else if (isNaN(input)){
+	 		displayText.innerHTML ="that is not a number"
+	 		displayText.style.color="#FCEE3D"
+	 		div.style.backgroundColor ="#21325B"
+	 	}
+	 	else {
+	 		displayText.innerHTML="you can't win a Jackpot A hole"
+	 		displayText.style.color = "pink"
+	 		div.style.backgroundColor ="#B9E3DA"
+	 	}
+
+
+	 } 
+	 playBtn.addEventListener("click", function(){
+	 	location.reload()
+	 })
+
+
+
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
