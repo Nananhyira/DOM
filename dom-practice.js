@@ -8,11 +8,15 @@ console.log(random)
 function guessTheNumber() {
 	let input = document.getElementById("input").value
 	if (random == input) {
+		
 		textDisplay.innerHTML="Hurray you guessed right 🤗  " +""+ "the number is " + random
 		textDisplay.style.color ="#9FD603"
-		textDisplay.style.animation="blinking 6.5s infinite;"
-		div.style.backgroundColor ="#2B5D2B"
+		// textDisplay.style.animation="blinking 6.5s infinite;"
+		setTimeout(()=>{ div.style.backgroundColor ="#2B5D2B"},2000)
+		
 		//div.style.backgroundColor ="#2B5D2B"
+		textDisplay.classList.add("win")
+		// random.style.color="white"
 	}
 
 	else if (isNaN(input)){
@@ -44,13 +48,16 @@ function guessTheNumber() {
 	 	}
 
 	else {
-	 		textDisplay.innerHTML="you can't win a Jackpot A hole 🥵 Guess Again"
-	 		textDisplay.style.color = "pink"
+	 		textDisplay.innerHTML="you can't win a Jackpot A-hole 🥵 Guess Again"
+	 		textDisplay.style.color = "#aa336a"
 	 		div.style.backgroundColor ="#B9E3DA"
 	 	} 	
 
 	
 }
+
+// let rand = Math.floor(Math.random()*100)
+// console.log(rand)
 
 
 btn.addEventListener("click", guessTheNumber)

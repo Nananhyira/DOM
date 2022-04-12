@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="dom-practice.css">
+	<title></title>
+</head>
+<body>
+	<ul class="mom">
+		<li>kachi</li>
+		<li>joan</li>
+		<li>clarence</li>
+		<li>esther</li>	
+	</ul>
+	<!-- <input type="text" id="newUser">
+	<button id="add">add user</button>
+	<br> -->
+
+<label>names of schools </label>
+<br>
+<input type="text" name="schools" placeholder="schools" id="input">
+<button id="btn">add new school</button>
+
+<script>
+
+	// const schoolNames = document.querySelector(".mom")
+	// const inputItem = document.querySelector("#input")
+	// const btn =document.querySelector("#btn")
+
+	// btn.addEventListener("click",()=>{
+	// 	const createNewList = document.createElement("LI")
+	// 	const newItem =document.createTextNode(inputItem.value)
+	// 	createNewList.appendChild(newItem)
+	// 	schoolNames.appendChild(newItem)
+
+
+
+	// })
+
+	const list = document.querySelector(".mom")
+	const vvValue= document.querySelector("#input")
+	const butt = document.querySelector("#btn")
+
+	butt.addEventListener("click", function(){
+     const newlist = document.createElement("LI")
+     const newItem =document.createTextNode(vvValue.value)
+      newlist.appendChild(newItem)
+      list.appendChild(newlist)
+      newlist.style.color="green"
+      // newlist.style.listStyle="none"
+      newlist.classList.add("win")
+
+
+	})
+
+
+// const userList = document.querySelector(".mom") ;
+// const listInput = document.querySelector("#input");
+// const addListBtn = document.querySelector("#btn");
+// addListBtn. addEventListener("click", function(){
+
+// const newLi = document.createElement ("LI");
+// const liContent = document.createTextNode (input.value);
+
+// newLi.appendChild(liContent);
+// userList.appendChild(newLi);
+// })
+
+	// let userList = document.querySelectorAll(".mom li");
+	// let add = document.querySelector(".add")
+	// let newUser =document.getElementById("newUser")
+
+
+ //    for( user of userList){
+	//  	add.addEventListener("click", function(){
+	//  		let  newli = document.createElement("LI")
+	//  		let newUserValue = document.createTextNode(newUser.value)
+
+	//  		newli.appendChild(newUserValue)
+	//  		userList.appendChild(newli)
+	 		
+
+	//  	})
+	//  }
+
+	
+//  
+// const ages = [34,5,33,3,455,566,67,78,45,45,3,2,45,345,2,22,211,114,6,6,7,222,,1,23,4,65,32344,]
+//  let canDrink = []
+//  for(i=0; i <ages.length; i++){
+// 	if(ages[i]>=21){
+// 		canDrink.push(ages[i])
+
+// 	}
+
+//  }
+ 
+//  const canDrink = ages.filter(age=> age >= 21)
+
+// console.log(canDrink)
+// let company = [{}]
+
+//  const retailCompany = company.filter(company=>company.category==="retail")
+
+//  console.log(retailCompany)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
